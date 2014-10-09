@@ -1,0 +1,4 @@
+WARNING: No route found for IPv6 destination :: (no default route?)
+port was open to attack
+root@Ubuntu-Dell:/home/abahrain/Documents/ECE 404/Homework 8# 
+

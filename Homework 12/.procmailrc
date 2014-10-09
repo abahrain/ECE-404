@@ -1,0 +1,66 @@
+SHELL=/bin/sh
+PATH=/usr/local/lib/mh:$PATH
+MAILDIR=$HOME/Mail
+LOGFILE=$HOME/Mail/logfile
+#VERBOSE=1
+VERBOSE=0
+EOL="
+"
+LOG="$EOL$EOL$EOL"
+LOG="New message log:$EOL"
+LOG=‘perl GET_MESSAGE_INDEX‘
+LOG="$EOL"
+
+
+FROM=`formail -xFrom:`
+MAXAT=1
+    
+## count the number of @ in From:
+:0
+* 1^1 FROM ?? @
+{ ATCOUNT = $= }
+
+## allow 1 @ in From:, otherwise spam
+:0:
+* $ ${ATCOUNT}^0
+* $ -${MAXAT}^0
+spam1
+
+## Recipe_2:
+##
+## trapped based on the subject portion of the email
+##
+:0 H
+* Subject:.*[A-Z]{2,}
+spam2
+
+## Recipe_3:
+##
+## trapped based on the body content of the email
+##
+:0 B
+* Num-parts: 2
+* <1
+* !^Content-Type: text/plain
+* !^Content-Type: text/html
+*  
+spam3
+
+## Recipe_4:
+## 
+## trapped using compound rules
+##
+:0 HB
+* !^Content-Type: text/plain
+* !^Content-Type: text/html
+* Content-Type: multipart/alternative
+* Body-file: NONE
+* !^content-type: application/zip
+* !^content-type: application/msword
+* !^content-type: application/.*signature
+* !^Content-Transfer-Encoding: base64
+* 
+spam4
+
+:0 :
+Inbox

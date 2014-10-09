@@ -1,0 +1,60 @@
+root@Ubuntu-Dell:/home/abahrain/Documents/ECE 404/Homework 8# tcpdump -vvv -nn -i wlan0 -s 1514 -S -X -c 5 'src 168.62.224.13' or 'dst 192.168.1.1 and port 80'
+tcpdump: listening on wlan0, link-type EN10MB (Ethernet), capture size 1514 bytes
+23:47:13.920327 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:13.973270 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:14.016380 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:14.057591 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:14.120234 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+5 packets captured
+5 packets received by filter
+0 packets dropped by kernel
+root@Ubuntu-Dell:/home/abahrain/Documents/ECE 404/Homework 8# tcpdump -vvv -nn -i wlan0 -s 1514 -S -X -c 5 'src 168.62.224.13' or 'dst 192.168.1.1 and port 80'
+tcpdump: listening on wlan0, link-type EN10MB (Ethernet), capture size 1514 bytes
+23:47:24.865803 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:24.912593 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:24.956993 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:25.008161 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+23:47:25.052300 IP (tos 0x0, ttl 64, id 1, offset 0, flags [none], proto TCP (6), length 40)
+    168.62.224.13.80 > 192.168.1.1.80: Flags [S], cksum 0x454d (correct), seq 0, win 8192, length 0
+	0x0000:  4500 0028 0001 0000 4006 30da a83e e00d  E..(....@.0..>..
+	0x0010:  c0a8 0101 0050 0050 0000 0000 0000 0000  .....P.P........
+	0x0020:  5002 2000 454d 0000                      P...EM..
+5 packets captured
+5 packets received by filter
+0 packets dropped by kernel
